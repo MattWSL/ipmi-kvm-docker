@@ -1,7 +1,7 @@
 ## ipmi-kvm-docker
 
 Ever wanted to access and IPMI KVM console, only to find that you don't
-have network access or the right version of java or a compatible 
+have network access or the right version of java or a compatible
 browser or credentials?
 
 This container runs:
@@ -21,11 +21,14 @@ on the Docker Hub.
     # on a remote host that can reach ipmi
     ssh admin
     $ docker run -p 8080:8080 solarkennedy/ipmi-kvm-docker
-    
+
     # Now on your laptop
     xdg-open http://admin:8080
 
-In your web browser you should see the firefox, ready to connect to 
+In your web browser you should see the firefox, ready to connect to
 and IPMI KVM:
+
+Slightly modified from solarkennedy by bumping the resolution settings up a bit
+Just pass in a data dir with your isos and re-image those servers
 
 ![IPMI Screenshot](https://raw.githubusercontent.com/solarkennedy/ipmi-kvm-docker/master/screenshot.png)
